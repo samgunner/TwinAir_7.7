@@ -19,6 +19,7 @@ services:
     volumes:
       - grafana-storage:/var/lib/grafana
       - ./conf/grafana.db:/var/lib/grafana/grafana.db
+      - ./conf/plugins:/var/lib/grafana/plugins
       - ./conf/ssl:/etc/grafana/ssl
       - ./conf/img:/usr/share/grafana/public/img
 volumes:
