@@ -18,8 +18,8 @@ services:
       - '13000:3000'
     volumes:
       - grafana-storage:/var/lib/grafana
-        #- /home/harp/Projects/TwinAIR/WP77/240710_grafana_docker/240710_grafana_docker_grafana-storage:/var/lib/grafana
-      - /home/harp/Projects/TwinAIR/WP77/240710_grafana_docker/conf:/etc/grafana/ssl
-      - ./img:/usr/share/grafana/public/img
+      - ./conf/grafana.db:/var/lib/grafana/grafana.db
+      - ./conf/ssl:/etc/grafana/ssl
+      - ./conf/img:/usr/share/grafana/public/img
 volumes:
     grafana-storage: {}
