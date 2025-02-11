@@ -5,7 +5,14 @@ This is a TwinAIR branded Grafana Dashboard built for the TwinAIR project.
 
 It retrieves data from the TwinAIR Central Data Store using the Marcus Olsson JSON Datasource.
 
-Once cloned, launch the Grafana Docker by running:
+Once cloned, you may need to change the permission on the conf/grafana.db file so that it is writable by the container. The only way I have found to do this is by making it writable by everyone, and so running the command:
+
+```
+chmod 666 conf/grafana.db
+```
+although I appreciate this isn't idea from a security perspective. If you know of a better way then pleace let me know!
+
+Once this is done you should be able to launch the Grafana Docker by running:
 ```
 sudo docker compose up
 ```
